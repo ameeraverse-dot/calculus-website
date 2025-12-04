@@ -1,0 +1,191 @@
+/* ==== GLOBAL STYLING & COLORS ==== */
+:root {
+    --maroon: #7A0C21;
+    --bg-light: #FFF7F8;
+    --bg-white: #FFFFFF;
+    --text-dark: #1a1a1a;
+    --text-muted: #555555;
+    --accent: #7A0C21;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* ==== HEADER ==== */
+header {
+    background: var(--maroon);
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-family: "Merriweather", serif;
+    font-size: 2.2rem;
+    margin-bottom: 8px;
+}
+
+header p {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* ==== CONTAINER ==== */
+.container {
+    max-width: 95%;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+/* ==== TOPIC SECTIONS / CARDS ==== */
+.topic-section, .topic {
+    background: #FAF3F4;
+    border-left: 8px solid var(--accent);
+    padding: 25px 20px;
+    margin-bottom: 30px;
+    border-radius: 18px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    width: 100%;
+    max-width: 900px;
+    transition: 0.3s ease;
+}
+
+.topic-section:hover, .topic:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 26px rgba(0,0,0,0.12);
+}
+
+.topic-title, .topic h2 {
+    font-family: "Merriweather", serif;
+    color: var(--accent);
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+/* ==== CURSIVE TITLES FOR DERIVATIVES, CHAIN RULE, MIN/MAX ==== */
+.topic-section#derivatives .topic-title,
+.topic-section#chain-rule .topic-title,
+.topic-section#extrema .topic-title {
+    font-family: "Dancing Script", cursive;
+    font-style: italic;
+}
+
+/* ==== EXAMPLES ==== */
+.example-box {
+    background: #fff;
+    padding: 18px 20px;
+    border-left: 5px solid var(--accent);
+    border-radius: 12px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    border: 1px solid #e7d5d8;
+}
+
+.example-box h3 {
+    margin-bottom: 10px;
+    color: var(--accent);
+}
+
+.deriv {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+/* ==== FRACTION FORMAT (dx/dx) ==== */
+.frac {
+    display: inline-flex;
+    flex-direction: column;
+    text-align: center;
+    margin-right: 6px;
+}
+
+.frac .top {
+    border-bottom: 2px solid #000;
+    display: block;
+    padding: 2px 4px;
+}
+
+.frac .bottom {
+    display: block;
+    padding: 2px 4px;
+}
+
+/* ==== FORMULA ==== */
+.formula {
+    background: #fde9eb;
+    padding: 10px 15px;
+    border-left: 4px solid var(--accent);
+    display: inline-block;
+    margin: 15px 0;
+    font-size: 1.1rem;
+}
+
+/* ==== STEPS ==== */
+.steps {
+    margin-left: 20px;
+    margin-top: 8px;
+}
+
+.steps li {
+    margin: 6px 0;
+}
+
+.steps p {
+    margin-bottom: 6px;
+}
+
+/* ==== FINAL ANSWER ==== */
+.final-answer {
+    margin-top: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--accent);
+}
+
+/* ==== FOOTER ==== */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    color: white;
+    background: var(--maroon);
+    font-weight: 600;
+    border-top: 4px solid var(--accent);
+}
+
+/* ==== ORDERED LIST ==== */
+ol {
+    margin-left: 20px;
+}
+
+/* ==== RESPONSIVE DESIGN ==== */
+@media only screen and (max-width: 600px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .topic-title, .topic h2 {
+        font-size: 2rem;
+    }
+
+    .steps {
+        margin-left: 15px;
+    }
+
+    .example-box {
+        padding: 15px;
+    }
+}
